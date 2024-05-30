@@ -1,0 +1,144 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #222;
+}
+
+.btn {
+    font-size: 17px;
+    background: transparent;
+    border: none;
+    padding: 1em 1.5em;
+    color: #ffc506;
+    text-transform: uppercase;
+    position: relative;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #ffc506;
+    transition: 0.5s ease;
+}
+
+.btn:hover {
+    color: #ff8866;
+    transition-delay: 0.5s;
+}
+
+.btn:hover::before {
+    width: 100%;
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    background-color: #ffc506;
+    transition: 0.4s ease;
+    z-index: -1;
+}
+
+.btn:hover::after {
+    height: 100%;
+    transition-delay: 0.4s;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #ffc506;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #ffbb66;
+}
+
+/* Offers Section */
+.offers-section {
+    padding: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.offer-card {
+    background-color: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.offer-card:hover {
+    transform: scale(1.05);
+}
+
+.offer-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.offer-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.offer-content h2 {
+    color: #ffc506;
+    margin-bottom: 10px;
+}
+
+.offer-content p {
+    color: #ffbb66;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #222;
+}
+
+footer p {
+    color: #ffbb66;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <div class="navbar">
+      
+        <a href="menu.html"><button class="btn">Menu</button></a>
+        <a href="offer.html"><button class="btn">Offers</button></a>
+        <a href="table.html"><button class="btn">Book a Table</button></a>
+        <a href="contact.html"><button class="btn">Contact</button></a>
+        <span id="user-email" style="color: aliceblue;"></span>
+        <button id="logout-button" class="btn">Logout</button>
+    </div>
+
+    <section class="hero">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you! Get in touch with us for any inquiries or feedback.</p>
+    </section>
+
+    <section class="contact-section">
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p><strong>Address:</strong> 123 Restaurant Street, Food City, Yumland</p>
+            <p><strong>Phone:</strong> +1 234 567 890</p>
+            <p><strong>Email:</strong> info@ourrestaurant.com</p>
+        </div>
+
+        <div class="contact-form">
+            <h2>Get in Touch</h2>
+            <form action="#" method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-app.js";
+        import { getAuth, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-auth.js";
+        import { getDatabase, ref, get, child } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-database.js";
+  
+        const firebaseConfig = {
+            apiKey: "AIzaSyDNxE0VN3dwGmKK6cpbhHTorWtJWkoAFio",
+            authDomain: "login-with-firebase-8471d.firebaseapp.com",
+            databaseURL: "https://login-with-firebase-8471d-default-rtdb.firebaseio.com",
+            projectId: "login-with-firebase-8471d",
+            storageBucket: "login-with-firebase-8471d.appspot.com",
+            messagingSenderId: "230816036738",
+            appId: "1:230816036738:web:a23bf3f1ff6eb0242e019b",
+            measurementId: "G-TP6ZVFQT7K"
+        };
+  
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+        const db = getDatabase(app);
+  
+        function readUserData(userId) {
+            const dbRef = ref(getDatabase());
+            get(child(dbRef, `users/${userId}`)).then((snapshot) => {
+                if (snapshot.exists()) {
+                    console.log(snapshot.val());
+                    document.getElementById('user-email').textContent = snapshot.val().email;
+                } else {
+                    console.log("No data available");
+                }
+            }).catch((error) => {
+                console.error('Error reading user data:', error);
+            });
+        }
+  
+        document.getElementById('logout-button').addEventListener('click', () => {
+            signOut(auth)
+                .then(() => {
+                    console.log('Logout Success');
+                    window.location.href = 'index.html';
+                })
+                .catch((error) => {
+                    console.error('Logout Error', error);
+                });
+        });
+  
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                document.getElementById('user-div').style.display = 'block';
+                readUserData(user.uid);
+            } else {
+                document.getElementById('user-div').style.display = 'none';
+                window.location.href = 'index.html'; // Redirect to login if not authenticated
+            }
+        });
+    </script>
+    <footer>
+        <p>&copy; 2024 Our Restaurant. All rights reserved.</p>
+    </footer>
+</body>
+</html>

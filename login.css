@@ -1,0 +1,142 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #222;
+    margin-bottom: 30px;
+}
+
+.btn {
+    font-size: 17px;
+    background: transparent;
+    border: none;
+    padding: 1em 1.5em;
+    color: #ffc506;
+    text-transform: uppercase;
+    position: relative;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #ffc506;
+    transition: 0.5s ease;
+}
+
+.btn:hover {
+    color: #ff8866;
+    transition-delay: 0.5s;
+}
+
+.btn:hover::before {
+    width: 100%;
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    background-color: #ffc506;
+    transition: 0.4s ease;
+    z-index: -1;
+}
+
+.btn:hover::after {
+    height: 100%;
+    transition-delay: 0.4s;
+}
+
+/* Forms Section */
+.forms-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.form-div {
+    background-color: #222;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 1px #000;
+    width: 300px;
+    text-align: center;
+}
+
+.form-div h2 {
+    margin-bottom: 20px;
+    color: #ffc506;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+}
+
+.form-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffc506;
+    border: none;
+    border-radius: 5px;
+    color: #111;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-button:hover {
+    background-color: #ff8866;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #222;
+    margin-top: 30px;
+}
+
+footer p {
+    color: #ffbb66;
+}
+.gg {
+    display: flex; /* This makes the container a flex container */
+    align-items: center; /* Aligns items vertically in the center */
+    justify-content: center; /* Aligns items horizontally in the center */
+    padding: 10px ;
+}

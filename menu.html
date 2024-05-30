@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#Non-Veg">  <button class="btn" >Non-Veg</button></a>
+        <a href="#Veg "> <button class="btn">Veg</button></a>
+        <a href="table.html"><button class="btn">Table booking</button></a>
+        <a href="contact.html"><button class="btn">Contact</button></a>
+        <span id="user-email" style="color: aliceblue;"></span>
+        <button id="logout-button" class="btn">Logout</button>
+     
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to Our Restaurant</h1>
+        <p>Discover the finest dishes and exquisite flavors</p>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu-section">
+        <h2>Our Menu</h2>
+        <div id="Non-Veg" >
+        <h3>Non-veg</h3>
+        
+        <div class="card-container">
+            
+            
+            <div class="card">
+                <div class="content">
+                  <div class="back">
+                    <div class="back-content back-content3">
+                      <!-- No content inside the back of the card -->
+                    </div>
+                  </div>
+                  <div class="front">
+                    <div class="img" style="background-image: url('butter-chicken--750x750.jpg');">
+                      <div class="circle"></div>
+                      <div class="circle" id="right"></div>
+                      <div class="circle" id="bottom"></div>
+                    </div>
+                    <div class="front-content">
+                      <small class="badge">Butter Chicken</small>
+                      <div class="description">
+                        <div class="title">
+                          <p class="title">
+                            <strong>Butter Chicken</strong>
+                          </p>
+                          <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                            <g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997">
+                              <g transform="scale(8,8)">
+                                <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                              </g>
+                            </g>
+                          </svg>
+                        </div>
+                        <p class="card-footer">
+                          30 Mins &nbsp; | &nbsp; 1 Serving
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                
+              <!--second box-->
+              <div class="card">
+                <div class="content">
+                  <div class="back">
+                    <div class="back-content back-content2">
+                      <!-- No content inside the back of the card -->
+                    </div>
+                  </div>
+                  <div class="front">
+                    <div class="img" style="background-image: url('Chicken-Tikka-Masala-min.jpg');">
+                      <div class="circle"></div>
+                      <div class="circle" id="right"></div>
+                      <div class="circle" id="bottom"></div>
+                    </div>
+                    <div class="front-content">
+                      <small class="badge">Chicken Tikka Masala</small>
+                      <div class="description">
+                        <div class="title">
+                          <p class="title">
+                            <strong>Chicken Tikka Masala</strong>
+                          </p>
+                          <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                            <g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997">
+                              <g transform="scale(8,8)">
+                                <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                              </g>
+                            </g>
+                          </svg>
+                        </div>
+                        <p class="card-footer">
+                          30 Mins &nbsp; | &nbsp; 1 Serving
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--thrid box-->
+              <div class="card">
+                <div class="content">
+                  <div class="back">
+                    <div class="back-content back-content1">
+                      <!-- No content inside the back of the card -->
+                    </div>
+                  </div>
+                  <div class="front">
+                    <div class="img" style="background-image: url('veg-rogan-josh-overhead-close-up-in-pan.jpg');">
+                      <div class="circle"></div>
+                      <div class="circle" id="right"></div>
+                      <div class="circle" id="bottom"></div>
+                    </div>
+                    <div class="front-content">
+                      <small class="badge">Rogan Josh</small>
+                      <div class="description">
+                        <div class="title">
+                          <p class="title">
+                            <strong>Rogan Josh</strong>
+                          </p>
+                          <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                            <g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997">
+                              <g transform="scale(8,8)">
+                                <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                              </g>
+                            </g>
+                          </svg>
+                        </div>
+                        <p class="card-footer">
+                          30 Mins &nbsp; | &nbsp; 1 Serving
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="content">
+                  <div class="back">
+                    <div class="back-content back-content4">
+                      <!-- No content inside the back of the card -->
+                    </div>
+                  </div>
+                  <div class="front">
+                    <div class="img" style="background-image: url('Biryani-1.jpg');">
+                      <div class="circle"></div>
+                      <div class="circle" id="right"></div>
+                      <div class="circle" id="bottom"></div>
+                    </div>
+                    <div class="front-content">
+                      <small class="badge">Biryani</small>
+                      <div class="description">
+                        <div class="title">
+                          <p class="title">
+                            <strong>Biryani</strong>
+                          </p>
+                          <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                            <g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997">
+                              <g transform="scale(8,8)">
+                                <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                              </g>
+                            </g>
+                          </svg>
+                        </div>
+                        <p class="card-footer">
+                          30 Mins &nbsp; | &nbsp; 1 Serving
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="content">
+                  <div class="back">
+                    <div class="back-content back-content5">
+                      <!-- No content inside the back of the card -->
+                    </div>
+                  </div>
+                  <div class="front">
+                    <div class="img" style="background-image: url('tandoori-chicken-1-1200x1625.jpg');">
+                      <div class="circle"></div>
+                      <div class="circle" id="right"></div>
+                      <div class="circle" id="bottom"></div>
+                    </div>
+                    <div class="front-content">
+                      <small class="badge">Tandoori Chicken</small>
+                      <div class="description">
+                        <div class="title">
+                          <p class="title">
+                            <strong>Tandoori Chicken</strong>
+                          </p>
+                          <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                            <g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997">
+                              <g transform="scale(8,8)">
+                                <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                              </g>
+                            </g>
+                          </svg>
+                        </div>
+                        <p class="card-footer">
+                          30 Mins &nbsp; | &nbsp; 1 Serving
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="content">
+                  <div class="back">
+                    <div class="back-content back-content6">
+                      <!-- No content inside the back of the card -->
+                    </div>
+                  </div>
+                  <div class="front">
+                    <div class="img" style="background-image: url('Kerala-Fish-Curry_8957.jpg');">
+                      <div class="circle"></div>
+                      <div class="circle" id="right"></div>
+                      <div class="circle" id="bottom"></div>
+                    </div>
+                    <div class="front-content">
+                      <small class="badge">Fish Curry</small>
+                      <div class="description">
+                        <div class="title">
+                          <p class="title">
+                            <strong>Fish Curry</strong>
+                          </p>
+                          <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                            <g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997">
+                              <g transform="scale(8,8)">
+                                <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                              </g>
+                            </g>
+                          </svg>
+                        </div>
+                        <p class="card-footer">
+                          30 Mins &nbsp; | &nbsp; 1 Serving
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="content">
+                  <div class="back">
+                    <div class="back-content back-content7">
+                      <!-- No content inside the back of the card -->
+                    </div>
+                  </div>
+                  <div class="front">
+                    <div class="img" style="background-image: url('Goan_Chicken_Vindaloo.jpg');">
+                      <div class="circle"></div>
+                      <div class="circle" id="right"></div>
+                      <div class="circle" id="bottom"></div>
+                    </div>
+                    <div class="front-content">
+                      <small class="badge">Goan Vindaloo</small>
+                      <div class="description">
+                        <div class="title">
+                          <p class="title">
+                            <strong>Goan Vindaloo</strong>
+                          </p>
+                          <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                            <g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997">
+                              <g transform="scale(8,8)">
+                                <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                              </g>
+                            </g>
+                          </svg>
+                        </div>
+                        <p class="card-footer">
+                          30 Mins &nbsp; | &nbsp; 1 Serving
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="content">
+                  <div class="back">
+                    <div class="back-content back-content8">
+                      <!-- No content inside the back of the card -->
+                    </div>
+                  </div>
+                  <div class="front">
+                    <div class="img" style="background-image: url('hy-briyani.jpg');">
+                      <div class="circle"></div>
+                      <div class="circle" id="right"></div>
+                      <div class="circle" id="bottom"></div>
+                    </div>
+                    <div class="front-content">
+                      <small class="badge">Hyderabadi Dum Biryani</small>
+                      <div class="description">
+                        <div class="title">
+                          <p class="title">
+                            <strong>Hyderabadi Dum Biryani</strong>
+                          </p>
+                          <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                            <g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997">
+                              <g transform="scale(8,8)">
+                                <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                              </g>
+                            </g>
+                          </svg>
+                        </div>
+                        <p class="card-footer">
+                          30 Mins &nbsp; | &nbsp; 1 Serving
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="content">
+                  <div class="back">
+                    <div class="back-content back-content9">
+                      <!-- No content inside the back of the card -->
+                    </div>
+                  </div>
+                  <div class="front">
+                    <div class="img" style="background-image: url('chettinad-chicken-curry.jpg');">
+                      <div class="circle"></div>
+                      <div class="circle" id="right"></div>
+                      <div class="circle" id="bottom"></div>
+                    </div>
+                    <div class="front-content">
+                      <small class="badge">Chettinad Chicken</small>
+                      <div class="description">
+                        <div class="title">
+                          <p class="title">
+                            <strong>Chettinad Chicken</strong>
+                          </p>
+                          <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                            <g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997">
+                              <g transform="scale(8,8)">
+                                <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                              </g>
+                            </g>
+                          </svg>
+                        </div>
+                        <p class="card-footer">
+                          30 Mins &nbsp; | &nbsp; 1 Serving
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="content">
+                  <div class="back">
+                    <div class="back-content back-content10">
+                      <!-- No content inside the back of the card -->
+                    </div>
+                  </div>
+                  <div class="front">
+                    <div class="img" style="background-image: url('kebabs.jpg');">
+                      <div class="circle"></div>
+                      <div class="circle" id="right"></div>
+                      <div class="circle" id="bottom"></div>
+                    </div>
+                    <div class="front-content">
+                      <small class="badge">Kebabs</small>
+                      <div class="description">
+                        <div class="title">
+                          <p class="title">
+                            <strong>Kebabs</strong>
+                          </p>
+                          <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                            <g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997">
+                              <g transform="scale(8,8)">
+                                <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                              </g>
+                            </g>
+                          </svg>
+                        </div>
+                        <p class="card-footer">
+                          30 Mins &nbsp; | &nbsp; 1 Serving
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            
+              
+            
+            
+            
+            <!-- Add more cards as needed -->
+        </div>
+        </div>
+
+
+        <div id="Veg">
+            <h3>Veg</h3>
+            <div class="card-container">
+                <div class="card">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content back-content11">
+                          <!-- No content inside the back of the card -->
+                        </div>
+                      </div>
+                      <div class="front">
+                        <div class="img" style="background-image: url('Paneer-Tikka_thumb.jpg');">
+                          <div class="circle"></div>
+                          <div class="circle" id="right"></div>
+                          <div class="circle" id="bottom"></div>
+                        </div>
+                        <div class="front-content">
+                          <small class="badge">Paneer Tikka</small>
+                          <div class="description">
+                            <div class="title">
+                              <p class="title">
+                                <strong>Paneer Tikka</strong>
+                              </p>
+                              <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                                <g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997">
+                                  <g transform="scale(8,8)">
+                                    <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                                  </g>
+                                </g>
+                              </svg>
+                            </div>
+                            <p class="card-footer">
+                              30 Mins &nbsp; | &nbsp; 1 Serving
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="card">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content back-content12">
+                          <!-- No content inside the back of the card -->
+                        </div>
+                      </div>
+                      <div class="front">
+                        <div class="img" style="background-image: url('aloo-gobi-26.jpg');">
+                          <div class="circle"></div>
+                          <div class="circle" id="right"></div>
+                          <div class="circle" id="bottom"></div>
+                        </div>
+                        <div class="front-content">
+                          <small class="badge">Paneer Tikka</small>
+                          <div class="description">
+                            <div class="title">
+                              <p class="title">
+                                <strong>Paneer Tikka</strong>
+                              </p>
+                              <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                                <g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997">
+                                  <g transform="scale(8,8)">
+                                    <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                                  </g>
+                                </g>
+                              </svg>
+                            </div>
+                            <p class="card-footer">
+                              30 Mins &nbsp; | &nbsp; 1 Serving
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content back-content13">
+                          <!-- No content inside the back of the card -->
+                        </div>
+                      </div>
+                      <div class="front">
+                        <div class="img" style="background-image: url('palak+paneer+-+baked+angled+\(1+of+1\).jpg');">
+                          <div class="circle"></div>
+                          <div class="circle" id="right"></div>
+                          <div class="circle" id="bottom"></div>
+                        </div>
+                        <div class="front-content">
+                          <small class="badge">Palak Paneer</small>
+                          <div class="description">
+                            <div class="title">
+                              <p class="title">
+                                <strong>Palak Paneer</strong>
+                              </p>
+                              <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                                <g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997">
+                                  <g transform="scale(8,8)">
+                                    <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                                  </g>
+                                </g>
+                              </svg>
+                            </div>
+                            <p class="card-footer">
+                              30 Mins &nbsp; | &nbsp; 1 Serving
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                  <div class="card">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content back-content14">
+                          <!-- No content inside the back of the card -->
+                        </div>
+                      </div>
+                      <div class="front">
+                        <div class="img" style="background-image: url('chana-masala_-5.jpg');">
+                          <div class="circle"></div>
+                          <div class="circle" id="right"></div>
+                          <div class="circle" id="bottom"></div>
+                        </div>
+                        <div class="front-content">
+                          <small class="badge">Chana Masala</small>
+                          <div class="description">
+                            <div class="title">
+                              <p class="title">
+                                <strong>Chana Masala</strong>
+                              </p>
+                              <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                                <g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997">
+                                  <g transform="scale(8,8)">
+                                    <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                                  </g>
+                                </g>
+                              </svg>
+                            </div>
+                            <p class="card-footer">
+                              30 Mins &nbsp; | &nbsp; 1 Serving
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+
+
+                  <div class="card">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content back-content15">
+                          <!-- No content inside the back of the card -->
+                        </div>
+                      </div>
+                      <div class="front">
+                        <div class="img" style="background-image: url('Punjabi-Dal-Tadka-7.jpg');">
+                          <div class="circle"></div>
+                          <div class="circle" id="right"></div>
+                          <div class="circle" id="bottom"></div>
+                        </div>
+                        <div class="front-content">
+                          <small class="badge">Dal Tadka</small>
+                          <div class="description">
+                            <div class="title">
+                              <p class="title">
+                                <strong>Dal Tadka</strong>
+                              </p>
+                              <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                                <g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997">
+                                  <g transform="scale(8,8)">
+                                    <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                                  </g>
+                                </g>
+                              </svg>
+                            </div>
+                            <p class="card-footer">
+                              30 Mins &nbsp; | &nbsp; 1 Serving
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                  <div class="card">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content back-content16">
+                          <!-- No content inside the back of the card -->
+                        </div>
+                      </div>
+                      <div class="front">
+                        <div class="img" style="background-image: url('Baingan-Bharta-2-3.jpg');">
+                          <div class="circle"></div>
+                          <div class="circle" id="right"></div>
+                          <div class="circle" id="bottom"></div>
+                        </div>
+                        <div class="front-content">
+                          <small class="badge">Baingan Bharta</small>
+                          <div class="description">
+                            <div class="title">
+                              <p class="title">
+                                <strong>Baingan Bharta</strong>
+                              </p>
+                              <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                                <g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997">
+                                  <g transform="scale(8,8)">
+                                    <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                                  </g>
+                                </g>
+                              </svg>
+                            </div>
+                            <p class="card-footer">
+                              30 Mins &nbsp; | &nbsp; 1 Serving
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content back-content17">
+                          <!-- No content inside the back of the card -->
+                        </div>
+                      </div>
+                      <div class="front">
+                        <div class="img" style="background-image: url('veg-biryani-vegetable-biryani.jpg');">
+                          <div class="circle"></div>
+                          <div class="circle" id="right"></div>
+                          <div class="circle" id="bottom"></div>
+                        </div>
+                        <div class="front-content">
+                          <small class="badge">Vegetable Biryani</small>
+                          <div class="description">
+                            <div class="title">
+                              <p class="title">
+                                <strong>Vegetable Biryani</strong>
+                              </p>
+                              <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                                <g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997">
+                                  <g transform="scale(8,8)">
+                                    <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                                  </g>
+                                </g>
+                              </svg>
+                            </div>
+                            <p class="card-footer">
+                              30 Mins &nbsp; | &nbsp; 1 Serving
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content back-content18">
+                          <!-- No content inside the back of the card -->
+                        </div>
+                      </div>
+                      <div class="front">
+                        <div class="img" style="background-image: url('Methi_Masoor_Dal_Recipe_.jpg');">
+                          <div class="circle"></div>
+                          <div class="circle" id="right"></div>
+                          <div class="circle" id="bottom"></div>
+                        </div>
+                        <div class="front-content">
+                          <small class="badge">Masoor Dal</small>
+                          <div class="description">
+                            <div class="title">
+                              <p class="title">
+                                <strong>Masoor Dal</strong>
+                              </p>
+                              <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                                <g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997">
+                                  <g transform="scale(8,8)">
+                                    <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                                  </g>
+                                </g>
+                              </svg>
+                            </div>
+                            <p class="card-footer">
+                              30 Mins &nbsp; | &nbsp; 1 Serving
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content back-content19">
+                          <!-- No content inside the back of the card -->
+                        </div>
+                      </div>
+                      <div class="front">
+                        <div class="img" style="background-image: url('Creamy-Indian-Vegetable-Korma-Recipe-47-1024x1536.jpg');">
+                          <div class="circle"></div>
+                          <div class="circle" id="right"></div>
+                          <div class="circle" id="bottom"></div>
+                        </div>
+                        <div class="front-content">
+                          <small class="badge">Masoor Dal</small>
+                          <div class="description">
+                            <div class="title">
+                              <p class="title">
+                                <strong>Masoor Dal</strong>
+                              </p>
+                              <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                                <g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997">
+                                  <g transform="scale(8,8)">
+                                    <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                                  </g>
+                                </g>
+                              </svg>
+                            </div>
+                            <p class="card-footer">
+                              30 Mins &nbsp; | &nbsp; 1 Serving
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                  <div class="card">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content back-content20">
+                          <!-- No content inside the back of the card -->
+                        </div>
+                      </div>
+                      <div class="front">
+                        <div class="img" style="background-image: url('Pani-Puri-H1-WP-WT-S.jpg');">
+                          <div class="circle"></div>
+                          <div class="circle" id="right"></div>
+                          <div class="circle" id="bottom"></div>
+                        </div>
+                        <div class="front-content">
+                          <small class="badge">Pani Puri</small>
+                          <div class="description">
+                            <div class="title">
+                              <p class="title">
+                                <strong>Pani Puri</strong>
+                              </p>
+                              <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                                <g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997">
+                                  <g transform="scale(8,8)">
+                                    <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                                  </g>
+                                </g>
+                              </svg>
+                            </div>
+                            <p class="card-footer">
+                              30 Mins &nbsp; | &nbsp; 1 Serving
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div></div>
+
+    </section>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-app.js";
+      import { getAuth, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-auth.js";
+      import { getDatabase, ref, get, child } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-database.js";
+
+      const firebaseConfig = {
+          apiKey: "AIzaSyDNxE0VN3dwGmKK6cpbhHTorWtJWkoAFio",
+          authDomain: "login-with-firebase-8471d.firebaseapp.com",
+          databaseURL: "https://login-with-firebase-8471d-default-rtdb.firebaseio.com",
+          projectId: "login-with-firebase-8471d",
+          storageBucket: "login-with-firebase-8471d.appspot.com",
+          messagingSenderId: "230816036738",
+          appId: "1:230816036738:web:a23bf3f1ff6eb0242e019b",
+          measurementId: "G-TP6ZVFQT7K"
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth();
+      const db = getDatabase(app);
+
+      function readUserData(userId) {
+          const dbRef = ref(getDatabase());
+          get(child(dbRef, `users/${userId}`)).then((snapshot) => {
+              if (snapshot.exists()) {
+                  console.log(snapshot.val());
+                  document.getElementById('user-email').textContent = snapshot.val().email;
+              } else {
+                  console.log("No data available");
+              }
+          }).catch((error) => {
+              console.error('Error reading user data:', error);
+          });
+      }
+
+      document.getElementById('logout-button').addEventListener('click', () => {
+          signOut(auth)
+              .then(() => {
+                  console.log('Logout Success');
+                  window.location.href = 'index.html';
+              })
+              .catch((error) => {
+                  console.error('Logout Error', error);
+              });
+      });
+
+      onAuthStateChanged(auth, (user) => {
+          if (user) {
+              document.getElementById('user-div').style.display = 'block';
+              readUserData(user.uid);
+          } else {
+              document.getElementById('user-div').style.display = 'none';
+              window.location.href = 'index.html'; // Redirect to login if not authenticated
+          }
+      });
+  </script>
+</body>
+</html>

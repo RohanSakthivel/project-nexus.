@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Offers</title>
+    <link rel="stylesheet" href="offer.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="menu.html"><button class="btn">Menu</button></a>
+        <a href="offer.html"><button class="btn">Offers</button></a>
+        <a href="table.html"><button class="btn">Book a Table</button></a>
+        <a href="contact.html"><button class="btn">Contact</button></a>
+        <span id="user-email" style="color: aliceblue;"></span>
+        <button id="logout-button" class="btn">Logout</button>
+    </div>
+
+    <section class="hero">
+        <h1>Current Offers</h1>
+        <p>Check out our latest promotions and offers!</p>
+    </section>
+
+    <section class="offers-section">
+        <div class="offer-card">
+            <img src="offer1.jpg" alt="Offer 1">
+            <div class="offer-content">
+                <h2>Happy Hour</h2>
+                <p>Get 50% off on all drinks from 4 PM to 7 PM every day.</p>
+            </div>
+        </div>
+        <div class="offer-card">
+            <img src="offer2.jpg" alt="Offer 2">
+            <div class="offer-content">
+                <h2>Family Feast</h2>
+                <p>Enjoy a family meal for 4 at just $49.99 on weekends.</p>
+            </div>
+        </div>
+        <div class="offer-card">
+            <img src="offer3.jpg" alt="Offer 3">
+            <div class="offer-content">
+                <h2>Lunch Special</h2>
+                <p>Special lunch menu available from 12 PM to 2 PM at $9.99.</p>
+            </div>
+        </div>
+        <!-- Add more offers as needed -->
+    </section>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-app.js";
+        import { getAuth, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-auth.js";
+        import { getDatabase, ref, get, child } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-database.js";
+  
+        const firebaseConfig = {
+            apiKey: "AIzaSyDNxE0VN3dwGmKK6cpbhHTorWtJWkoAFio",
+            authDomain: "login-with-firebase-8471d.firebaseapp.com",
+            databaseURL: "https://login-with-firebase-8471d-default-rtdb.firebaseio.com",
+            projectId: "login-with-firebase-8471d",
+            storageBucket: "login-with-firebase-8471d.appspot.com",
+            messagingSenderId: "230816036738",
+            appId: "1:230816036738:web:a23bf3f1ff6eb0242e019b",
+            measurementId: "G-TP6ZVFQT7K"
+        };
+  
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+        const db = getDatabase(app);
+  
+        function readUserData(userId) {
+            const dbRef = ref(getDatabase());
+            get(child(dbRef, `users/${userId}`)).then((snapshot) => {
+                if (snapshot.exists()) {
+                    console.log(snapshot.val());
+                    document.getElementById('user-email').textContent = snapshot.val().email;
+                } else {
+                    console.log("No data available");
+                }
+            }).catch((error) => {
+                console.error('Error reading user data:', error);
+            });
+        }
+  
+        document.getElementById('logout-button').addEventListener('click', () => {
+            signOut(auth)
+                .then(() => {
+                    console.log('Logout Success');
+                    window.location.href = 'index.html';
+                })
+                .catch((error) => {
+                    console.error('Logout Error', error);
+                });
+        });
+  
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                document.getElementById('user-div').style.display = 'block';
+                readUserData(user.uid);
+            } else {
+                document.getElementById('user-div').style.display = 'none';
+                window.location.href = 'index.html'; // Redirect to login if not authenticated
+            }
+        });
+    </script>
+    <footer>
+        <p>&copy; 2024 Our Restaurant. All rights reserved.</p>
+    </footer>
+</body>
+</html>

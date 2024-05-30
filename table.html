@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Booking</title>
+    <link rel="stylesheet" href="table.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="menu.html" ><button class="btn">Menu</button></a>
+        <a href="table.html"><button class="btn">Book a Table</button></a>
+        <a href="contact.html"><button class="btn">Contact</button></a>
+        <span id="user-email" style="color: aliceblue;"></span>
+        <button id="logout-button" class="btn">Logout</button>
+    </div>
+
+    <section class="hero">
+        <h1>Welcome to Our Restaurant</h1>
+        <p>Experience the best dining in the city. Book your table now!</p>
+    </section>
+
+    <section class="booking-section">
+        <h2>Book a Table</h2>
+        <form id="booking-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" required>
+            </div>
+            <div class="form-group">
+                <label for="guests">Number of Guests:</label>
+                <input type="number" id="guests" name="guests" min="1" max="20" required>
+            </div>
+            <div class="form-group3">
+                <label for="table">Select Table:</label>
+                <div class="table-grid">
+                    <div class="table" data-table-number="1"> <h5> 1 </h5> </div>
+                    <div class="table" data-table-number="2"> <h5> 2 </h5> </div>
+                    <div class="table" data-table-number="3"> <h5> 3 </h5> </div>
+                    <div class="table" data-table-number="4"> <h5> 4 </h5> </div>
+                    <div class="table" data-table-number="5"> <h5> 5 </h5> </div>
+                    <div class="table" data-table-number="6"> <h5> 6 </h5> </div>
+                    <div class="table" data-table-number="7"> <h5> 7 </h5> </div>
+                    <div class="table" data-table-number="8"> <h5> 8 </h5> </div>
+                    <div class="table" data-table-number="9"> <h5> 9 </h5> </div>
+                    <div class="table" data-table-number="10"><h5> 10 </h5> </div>
+                    <div class="table" data-table-number="11"><h5> 11 </h5> </div>
+                    <div class="table" data-table-number="12"><h5> 12 </h5> </div>
+                    <div class="table" data-table-number="13"><h5> 13 </h5> </div>
+                    <div class="table" data-table-number="14"><h5> 14 </h5> </div>
+                    <div class="table" data-table-number="15"><h5> 15 </h5> </div>
+                    <div class="table" data-table-number="16"><h5> 16 </h5> </div>
+                    <div class="table" data-table-number="17"><h5> 17 </h5> </div>
+                    <div class="table" data-table-number="18"><h5> 18 </h5> </div>
+                    <div class="table" data-table-number="19"><h5> 19 </h5> </div>
+                    <div class="table" data-table-number="20"><h5> 20 </h5> </div>
+                </div>
+                <input type="hidden" id="table" name="table" required>
+            </div>
+            <button type="submit" class="btn" onclick="table()">Book Now</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Our Restaurant. All rights reserved.</p>
+    </footer>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-app.js";
+        import { getAuth, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-auth.js";
+        import { getDatabase, ref, get, child } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-database.js";
+  
+        const firebaseConfig = {
+            apiKey: "AIzaSyDNxE0VN3dwGmKK6cpbhHTorWtJWkoAFio",
+            authDomain: "login-with-firebase-8471d.firebaseapp.com",
+            databaseURL: "https://login-with-firebase-8471d-default-rtdb.firebaseio.com",
+            projectId: "login-with-firebase-8471d",
+            storageBucket: "login-with-firebase-8471d.appspot.com",
+            messagingSenderId: "230816036738",
+            appId: "1:230816036738:web:a23bf3f1ff6eb0242e019b",
+            measurementId: "G-TP6ZVFQT7K"
+        };
+  
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+        const db = getDatabase(app);
+  
+        function readUserData(userId) {
+            const dbRef = ref(getDatabase());
+            get(child(dbRef, `users/${userId}`)).then((snapshot) => {
+                if (snapshot.exists()) {
+                    console.log(snapshot.val());
+                    document.getElementById('user-email').textContent = snapshot.val().email;
+                } else {
+                    console.log("No data available");
+                }
+            }).catch((error) => {
+                console.error('Error reading user data:', error);
+            });
+        }
+  
+        document.getElementById('logout-button').addEventListener('click', () => {
+            signOut(auth)
+                .then(() => {
+                    console.log('Logout Success');
+                    window.location.href = 'index.html';
+                })
+                .catch((error) => {
+                    console.error('Logout Error', error);
+                });
+        });
+  
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                document.getElementById('user-div').style.display = 'block';
+                readUserData(user.uid);
+            } else {
+                document.getElementById('user-div').style.display = 'none';
+                window.location.href = 'index.html'; // Redirect to login if not authenticated
+            }
+        });
+    </script>
+    <script src="table.js"></script>
+</body>
+</html>
